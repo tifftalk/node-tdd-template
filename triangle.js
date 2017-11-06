@@ -6,6 +6,18 @@ class Triangle {
     this.side2 = side2;
     this.side3 = side3;
   }
+
+  isValid(){
+    if(this.side1 > this.side2 + this.side3){
+      return false;
+    } else if( this.side2 > this.side1 + this.side3 ){
+      return false;
+    } else if (this.side3 > this.side1 + this.side2){
+      return false;
+    } else {
+      return true;
+    }
+  }
 }
 
 module.exports.Triangle = Triangle;
